@@ -1,0 +1,82 @@
+/* default values */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+body {
+	background-color: #FBF8F6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 120vh;
+}
+
+/* form syles */
+.registrationForm {
+	width: 40vw;
+	background-color: #FBF8F6;
+	padding: 1rem;
+}
+.registrationForm .header {
+	font-size: 1.3rem;
+	margin-bottom: 2rem;
+}
+
+/* name input styles */
+.fullName {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.fullName,
+.email,
+.password,
+.teamSize,
+.technologies {
+	padding-bottom: 1rem;
+}
+.name input,
+.email input,
+.password input,
+.teamSize select,
+.button button {
+    margin-top: 0.5rem;
+	padding: 1rem;
+	border: 1px solid #d4d4d4;
+	border-radius: 10px;
+}
+.name{
+    width: 45%;
+}
+.name input,
+.email input,
+.password input {
+	width: 100%;
+}
+.teamSize select {
+	width: 40%;
+}
+.tech-Group {
+    margin-top: 1rem;
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.tech-Group-Column {
+	display: flex;
+	flex-direction: column;
+}
+.tech-Group-Column input {
+	margin-right: 1rem;
+}
+.button button {
+	width: 100%;
+	background-color: #1f1f21;
+	border: 1px solid #d4d4d4;
+	font-weight: 500;
+    color: #FFFFFF;
+}
