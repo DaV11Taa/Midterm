@@ -13,6 +13,15 @@ body {
 	justify-content: center;
 	height: 100vh;
 }
+#diceGame{
+	line-height: 1.6;
+	color: #333;
+	background-color: gray;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
 input {
 	outline: none;
 }
@@ -24,7 +33,7 @@ input {
 }
 .registrationForm .header {
 	font-size: 1rem;
-	/* margin-bottom: 1rem; */
+	margin-bottom: 2rem;
 }
 
 /* name input styles */
@@ -40,8 +49,8 @@ input {
 .email p,
 .teamSize p,
 .password p,
-.technologies p{
-	font-size: 0.81rem;	
+.technologies p {
+	font-size: 0.81rem;
 }
 .name input,
 .email input,
@@ -53,8 +62,11 @@ input {
 	/* border: 1px solid #d4d4d4; */
 	border-radius: 10px;
 }
-input, select, button{
+input,
+select,
+button {
 	border: 1px solid #d4d4d4;
+	cursor: pointer;
 }
 .name {
 	width: 45%;
@@ -89,15 +101,26 @@ input, select, button{
 	color: #ffffff;
 	/* margin-top: 2rem; */
 }
+label{
+	cursor: pointer;
+}
 .error {
 	color: #cc777b;
 	font-size: 12px;
+	height: 17px;
 }
-.normal{
+.normal {
 	border: 1px solid #d4d4d4;
 	box-shadow: none;
 }
-.invalid{
-	border: 1.5px solid #EACCC9;
-	box-shadow: 2px 2px 5.1px 0 #EBCDCA;
+.invalid {
+	border: 1.5px solid #eaccc9;
+	box-shadow: 2px 2px 5.1px 0 #ebcdca;
+}
+.tech-Group-Column > div {
+	display: flex;
+}
+#technologiesError img {
+	height: 13px;
+	margin-right: 0.7rem;
 }

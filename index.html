@@ -6,13 +6,11 @@
     <title>Mid-term</title>
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <script src="./script.js" defer></script>
 <body>
-    <div class="registrationForm">
+    <div class="registrationForm" id="registrationForm">
         <div class="header">
             <h1>Group Form</h1>
-            <audio autoplay>
-                <source src="audio.mp3" type="audio/mpeg">
-            </audio>
         </div>
         <form id="form" novalidate>
             <!-- this is fullName input row -->
@@ -20,13 +18,13 @@
                 <div class="fullName">
                     <div class="name">
                         <p>First Name</p>
-                        <input type="text" placeholder="First Name" class="invalid" required>
-                        <span id="firstNameError" class="error">First name required</span>
+                        <input type="text" id="firstName" placeholder="First Name" class="normal" required>
+                        <div id="firstNameError" class="error"></div>
                     </div>
                     <div class="name">
                         <p>Last Name</p>
-                        <input type="text" placeholder="Last Name" class="invalid" required>
-                        <span id="lastNameError" class="error">Last name required</span>
+                        <input type="text" id="lastName" placeholder="Last Name" class="normal" required>
+                        <div id="lastNameError" class="error"></div>
                     </div>
                 </div>
             </div>
@@ -34,55 +32,103 @@
             <div class="row">
                 <div class="email">
                     <p>Email</p>
-                    <input type="email" placeholder="you@company.com" class="invalid" required>
+                    <input type="email" id="email" placeholder="you@company.com" class="normal" required>
                 </div>
-                <span id="emailError" class="error">Email requiered debilo</span>
+                <div id="emailError" class="error"></div>
             </div>
             <!-- this is password input row -->
             <div class="row">
                 <div class="password">
                     <p>Password</p>
-                    <input type="text" placeholder="Password" class="invalid" required>
+                    <input type="text" id="password" placeholder="Password" class="normal" required>
                 </div>
-                <span id="passwordError" class="error">Password must be at least 8 characters long</span>
+                <div id="passwordError" class="error"></div>
             </div>
             <!-- this is teamSize input row -->
             <div class="row">
                 <div class="teamSize">
                     <p>Team Size</p>
-                    <select name="teamSize" id="teamSize" class="invalid">
+                    <select name="teamSize" id="teamSize" class="normal">
                         <option disabled selected value="">-- Select --</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select>
                 </div>
-                <span id="teamSizeError" class="error">select it debilo</span>
+                <div id="teamSizeError" class="error"></div>
             </div>
             <!-- this is technologies input row -->
             <div class="row">
                 <div class="technologies">
                     <p>Technologies</p>
-                    <div class="tech-Group">
+                    <div class="tech-Group" id="tech-Group">
                         <div class="tech-Group-Column">
-                            <div><input type="checkbox">Html</div>
-                            <div><input type="checkbox">Css</div>
-                            <div><input type="checkbox">Javascript</div>
+                            <div><label for="html"><input type="checkbox" id="html">Html</label></div>
+                            <div><label for="css"><input type="checkbox" id="css">Css</label></div>
+                            <div><label for="js"><input type="checkbox" id="js">Javascript</label></div>
                         </div>
                         <div class="tech-Group-Column">
-                            <div><input type="checkbox">ReactJS</div>
-                            <div><input type="checkbox">Figma</div>
-                            <div><input type="checkbox">Github</div>
+                            <div><label for="reactjs"><input type="checkbox" id="reactjs">ReactJS</label></div>
+                            <div><label for="figma"><input type="checkbox" id="figma">Figma</label></div>
+                            <div><label for="github"><input type="checkbox" id="github">Github</label></div>
                         </div>
                     </div>
                 </div>
-                <span id="technologiesError" class="error"><img src="./a71b6f2de7c33aac0f7b5825639e860d.png" alt="Error not found" style="
-                height: 13px; margin-right: 0.7rem;">Choose at least 3 service.</span>
+                <div id="technologiesError" class="error" style="display: flex;"><img id="image" src="" alt=""><p id="text"></p></div>
             </div>
             <div class="button">
-                <button type="submit">Submit</button>
+                <button type="submit" id="submitBtn">Submit</button>
             </div>
         </form>
+    </div>
+    <div id="Dice Game"  style="display: none;">
+        <div class="container">
+            <h1>Dice Game</h1>
+            <p>Reset the game</p>
+            <div class="scores">
+              <div>player 1 score:<span id="player1Score"></span></div>
+              <div>player 2 score:<span id="player2Score"></span></div>
+            </div>
+            <div class="winner"></div>
+            <div class="dices">
+              <div class="dice">
+                <div>
+                  <div class="circle black"></div>
+                  <div class="circle black"></div>
+                </div>
+                <div>
+                  <div class="circle black"></div>
+                  <div class="circle black"></div>
+                  <div class="circle black"></div>
+                </div>
+                <div>
+                  <div class="circle black"></div>
+                  <div class="circle black"></div>
+                </div>
+              </div>
+              <div style="font-weight: 700; font-size: 1.25rem">vs</div>
+              <div class="dice2">
+                <div>
+                  <div class="circle black"></div>
+                  <div class="circle black"></div>
+                </div>
+                <div>
+                  <div class="circle black"></div>
+                  <div class="circle black"></div>
+                  <div class="circle black"></div>
+                </div>
+                <div>
+                  <div class="circle black"></div>
+                  <div class="circle black"></div>
+                </div>
+              </div>
+            </div>
+            <button id="rollBtn">ROLL</button>
+            <div class="history">Game History</div>
+            <ul></ul>
+          </div>
+        </body>
+        <script src="script2.js"></script>
     </div>
 </body>
 </html>
