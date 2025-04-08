@@ -10,54 +10,74 @@
     <div class="registrationForm">
         <div class="header">
             <h1>Group Form</h1>
+            <audio autoplay>
+                <source src="audio.mp3" type="audio/mpeg">
+            </audio>
         </div>
-        <form>
+        <form id="form" novalidate>
             <!-- this is fullName input row -->
-            <div class="fullName">
-                <div class="name">
-                    <p>First Name</p>
-                    <input type="text" placeholder="First Name">
-                </div>
-                <div class="name">
-                    <p>Last Name</p>
-                    <input type="text" placeholder="Last Name">
+            <div class="row">
+                <div class="fullName">
+                    <div class="name">
+                        <p>First Name</p>
+                        <input type="text" placeholder="First Name" class="invalid" required>
+                        <span id="firstNameError" class="error">First name required</span>
+                    </div>
+                    <div class="name">
+                        <p>Last Name</p>
+                        <input type="text" placeholder="Last Name" class="invalid" required>
+                        <span id="lastNameError" class="error">Last name required</span>
+                    </div>
                 </div>
             </div>
             <!-- this is email input row -->
-            <div class="email">
-                <p>Email</p>
-                <input type="email" placeholder="you@company.com">
+            <div class="row">
+                <div class="email">
+                    <p>Email</p>
+                    <input type="email" placeholder="you@company.com" class="invalid" required>
+                </div>
+                <span id="emailError" class="error">Email requiered debilo</span>
             </div>
             <!-- this is password input row -->
-            <div class="password">
-                <p>Password</p>
-                <input type="text" placeholder="Password">
+            <div class="row">
+                <div class="password">
+                    <p>Password</p>
+                    <input type="text" placeholder="Password" class="invalid" required>
+                </div>
+                <span id="passwordError" class="error">Password must be at least 8 characters long</span>
             </div>
             <!-- this is teamSize input row -->
-            <div class="teamSize">
-                <p>Team Size</p>
-                <select name="" id="">
-                    <option value="">0</option>
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                </select>
+            <div class="row">
+                <div class="teamSize">
+                    <p>Team Size</p>
+                    <select name="teamSize" id="teamSize" class="invalid">
+                        <option disabled selected value="">-- Select --</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <span id="teamSizeError" class="error">select it debilo</span>
             </div>
             <!-- this is technologies input row -->
-            <div class="technologies">
-                <p>Technologies</p>
-                <div class="tech-Group">
-                    <div class="tech-Group-Column">
-                        <div><input type="checkbox">Html</div>
-                        <div><input type="checkbox">Css</div>
-                        <div><input type="checkbox">Javascript</div>
-                    </div>
-                    <div class="tech-Group-Column">
-                        <div><input type="checkbox">ReactJS</div>
-                        <div><input type="checkbox">Figma</div>
-                        <div><input type="checkbox">Github</div>
+            <div class="row">
+                <div class="technologies">
+                    <p>Technologies</p>
+                    <div class="tech-Group">
+                        <div class="tech-Group-Column">
+                            <div><input type="checkbox">Html</div>
+                            <div><input type="checkbox">Css</div>
+                            <div><input type="checkbox">Javascript</div>
+                        </div>
+                        <div class="tech-Group-Column">
+                            <div><input type="checkbox">ReactJS</div>
+                            <div><input type="checkbox">Figma</div>
+                            <div><input type="checkbox">Github</div>
+                        </div>
                     </div>
                 </div>
+                <span id="technologiesError" class="error"><img src="./a71b6f2de7c33aac0f7b5825639e860d.png" alt="Error not found" style="
+                height: 13px; margin-right: 0.7rem;">Choose at least 3 service.</span>
             </div>
             <div class="button">
                 <button type="submit">Submit</button>

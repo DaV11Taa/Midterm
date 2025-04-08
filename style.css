@@ -3,26 +3,28 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
 }
 body {
-	background-color: #FBF8F6;
+	background-color: #fbf8f6;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 120vh;
+	height: 100vh;
 }
-
+input {
+	outline: none;
+}
 /* form syles */
 .registrationForm {
 	width: 40vw;
-	background-color: #FBF8F6;
-	padding: 1rem;
+	background-color: #fbf8f6;
+	padding: 0.5rem;
 }
 .registrationForm .header {
-	font-size: 1.3rem;
-	margin-bottom: 2rem;
+	font-size: 1rem;
+	/* margin-bottom: 1rem; */
 }
 
 /* name input styles */
@@ -31,25 +33,31 @@ body {
 	justify-content: space-between;
 	align-items: center;
 }
-.fullName,
-.email,
-.password,
-.teamSize,
-.technologies {
-	padding-bottom: 1rem;
+.row {
+	padding-bottom: 0.5rem;
+}
+.name p,
+.email p,
+.teamSize p,
+.password p,
+.technologies p{
+	font-size: 0.81rem;	
 }
 .name input,
 .email input,
 .password input,
 .teamSize select,
 .button button {
-    margin-top: 0.5rem;
-	padding: 1rem;
-	border: 1px solid #d4d4d4;
+	margin-top: 0.5rem;
+	padding: 0.5rem;
+	/* border: 1px solid #d4d4d4; */
 	border-radius: 10px;
 }
-.name{
-    width: 45%;
+input, select, button{
+	border: 1px solid #d4d4d4;
+}
+.name {
+	width: 45%;
 }
 .name input,
 .email input,
@@ -60,11 +68,12 @@ body {
 	width: 40%;
 }
 .tech-Group {
-    margin-top: 1rem;
+	margin-top: 1rem;
 	width: 60%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	font-size: 0.81rem;
 }
 .tech-Group-Column {
 	display: flex;
@@ -76,7 +85,19 @@ body {
 .button button {
 	width: 100%;
 	background-color: #1f1f21;
-	border: 1px solid #d4d4d4;
 	font-weight: 500;
-    color: #FFFFFF;
+	color: #ffffff;
+	/* margin-top: 2rem; */
+}
+.error {
+	color: #cc777b;
+	font-size: 12px;
+}
+.normal{
+	border: 1px solid #d4d4d4;
+	box-shadow: none;
+}
+.invalid{
+	border: 1.5px solid #EACCC9;
+	box-shadow: 2px 2px 5.1px 0 #EBCDCA;
 }
