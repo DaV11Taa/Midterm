@@ -210,12 +210,15 @@ label {
 	font-weight: 700;
 	color: #070a52;
 }
-#diceGame h1 + p {
-	/*targets reset the game p*/
+#reset {
 	font-weight: 700;
 	font-size: 1.1rem;
 	text-transform: uppercase;
 }
+#reset:hover{
+	cursor: pointer;
+}
+
 #scores div {
 	font-size: 1.1rem;
 	text-transform: uppercase;
@@ -237,6 +240,7 @@ ul li {
 	width: 100%;
 	/* display: list-item; */
 }
+/*  */
 ul li::before {
 	content: "• ";
 	margin-right: 0.5rem;
