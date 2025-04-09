@@ -62,11 +62,14 @@ input {
 	/* border: 1px solid #d4d4d4; */
 	border-radius: 10px;
 }
-input,
 select,
-button {
+button{
 	border: 1px solid #d4d4d4;
-	cursor: pointer;
+	cursor:pointer;
+}
+input{
+	border: 1px solid #d4d4d4;
+	cursor:text;
 }
 .name {
 	width: 45%;

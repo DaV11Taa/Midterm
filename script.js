@@ -24,22 +24,20 @@ const submitBtn = document.getElementById("submitBtn");
 form.addEventListener("submit", (event) => {
 	event.preventDefault();
 
-    let isValid = true
+	let isValid = true;
 
-    if(!checkFirstName()) isValid = false
-    if(!checkLastName()) isValid = false
-    if(!checkEmail()) isValid = false
-    if(!checkPassword()) isValid = false
-    if(!checkTeamSize()) isValid = false
-    if(!checkServices()) isValid = false
+	if (!checkFirstName()) isValid = false;
+	if (!checkLastName()) isValid = false;
+	if (!checkEmail()) isValid = false;
+	if (!checkPassword()) isValid = false;
+	if (!checkTeamSize()) isValid = false;
+	if (!checkServices()) isValid = false;
 
-	
-    if(isValid){
-        console.log("Passed :/");
-    }
-    else{
-        console.log("go kill yourself :)");
-    }
+	if (isValid) {
+		console.log("Passed :/");
+	} else {
+		console.log("go kill yourself :)");
+	}
 });
 
 // function to check validity of the firstName
@@ -73,20 +71,37 @@ function checkEmail() {
 		setError(email, emailError, "Email is required.");
 		return false;
 	} else {
-		clearError(email, emailError);
-		return true;
+		const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+		if (!regex.test(email.value)) {
+			clearError(email, emailError);
+			setError(email, emailError, "Wrong format.");
+			return false;
+		} else {
+			clearError(email, emailError);
+			return true;
+		}
 	}
 }
 
 // function to check validity of the fullName
 function checkPassword() {
 	// set Error if needed
-	if (!firstName.value) {
+	if (!password.value) {
 		setError(password, passwordError, "Password is required.");
 		return false;
 	} else {
-		clearError(password, passwordError);
-		return true;
+		if (!(password.value.length >= 8)) {
+			clearError(password, passwordError);
+			setError(
+				password,
+				passwordError,
+				"Password must be at least 8 characters long."
+			);
+			return false;
+		} else {
+			clearError(password, passwordError);
+			return true;
+		}
 	}
 }
 
@@ -105,22 +120,22 @@ function checkTeamSize() {
 // function to check validity of the agreement
 function checkServices() {
 	// set Error if needed
-    const servicesOptions = document.getElementById("tech-Group")
-    const services = servicesOptions.querySelectorAll("input")
+	const servicesOptions = document.getElementById("tech-Group");
+	const services = servicesOptions.querySelectorAll("input");
 
-    let isChecked = false
-    let findservices = []
-    let o = 3
-    findservices = [...services].filter((service) => service.checked)
-    if(findservices.length >=3) {
-        isChecked = true
-    }
-    
+	let isChecked = false;
+	let findservices = [];
+	let o = 3;
+	findservices = [...services].filter((service) => service.checked);
+	if (findservices.length >= 3) {
+		isChecked = true;
+	}
+
 	if (!isChecked) {
-        let image = document.getElementById("image")
-        let message = document.getElementById("text")
-        image.src = "./a71b6f2de7c33aac0f7b5825639e860d.png"
-        message.textContent = "Choose at least 3 service."
+		let image = document.getElementById("image");
+		let message = document.getElementById("text");
+		image.src = "./a71b6f2de7c33aac0f7b5825639e860d.png";
+		message.textContent = "Choose at least 3 service.";
 		return false;
 	} else {
 		technologiesError.textContent = "";
