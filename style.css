@@ -215,6 +215,10 @@ label {
 	font-size: 1.1rem;
 	text-transform: uppercase;
 }
+#reset:hover{
+	cursor: pointer;
+}
+
 #scores div {
 	font-size: 1.1rem;
 	text-transform: uppercase;
@@ -236,6 +240,7 @@ ul li {
 	width: 100%;
 	/* display: list-item; */
 }
+
 ul li::before {
 	content: "• ";
 	margin-right: 0.5rem;
