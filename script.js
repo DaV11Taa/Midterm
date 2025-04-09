@@ -1,9 +1,8 @@
 // import form of the Registration form
 const form = document.getElementById("form");
-const registrationForm = document.getElementById("registrationForm");
-// put DiceGame here
-// const diceGame = document.getElementById("civ");
-
+const task1 = document.getElementById("task1");
+const task2 = document.getElementById("task2");
+const root = document.documentElement
 // import all of the variables except of the RadioOptions
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
@@ -33,10 +32,15 @@ form.addEventListener("submit", (event) => {
 	if (!checkTeamSize()) isValid = false;
 	if (!checkServices()) isValid = false;
 
-	if (isValid) {
-		console.log("Passed :/");
-	} else {
+	if (!isValid) {
 		console.log("go kill yourself :)");
+	} else {
+		task2.classList.remove("hidden")
+		root.style.fontFamily = "Intel"
+		root.style.lineHeight = "100%"
+		root.style.fontWeight = "600px"
+		root.style.color = "#000000"		
+		task1.classList.add("hidden")
 	}
 });
 

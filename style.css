@@ -14,20 +14,23 @@ body {
 	height: 100vh;
 }
 #diceGame{
-	line-height: 1.6;
-	color: #333;
-	background-color: gray;
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	justify-content: center;
+  /* setting background and centering content */
+  line-height: 1.6;
+  color: #333;
+  background-color: #d9d9d9;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 input {
 	outline: none;
 }
 /* form syles */
-.registrationForm {
+#registrationForm {
 	width: 40vw;
+	min-width: 300px;
 	background-color: #fbf8f6;
 	padding: 0.5rem;
 }
@@ -95,7 +98,7 @@ input{
 	flex-direction: column;
 }
 .tech-Group-Column input {
-	margin-right: 1rem;
+	margin-right: 0.5rem;
 }
 .button button {
 	width: 100%;
@@ -127,3 +130,112 @@ label{
 	height: 13px;
 	margin-right: 0.7rem;
 }
+.hidden {
+	display: none;
+}
+
+/* --------------Dice Game------------------ */
+.container {/* holds all game elements */
+	padding: 15px 15px 15px 18px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	min-width: 400px;
+	justify-content: space-around;
+	max-height: 700px;
+	height: 100vh;
+  
+  }
+  .dice,.dice2 {
+	width: 98px;
+	height: 98px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 7px;
+	box-shadow: 8px 8px #000000;
+  }
+  .circle {
+	width: 18px;
+	height: 18px;
+	border-radius: 9px;
+  }
+  .black {
+	background-color: black; /*added to circles in dice*/
+  }
+  .dice > div,.dice2 > div {     /* targets each row of circles in the dice*/
+	display: flex;
+	justify-content: space-between;
+  }
+  .dices{
+	  display: flex;
+	  justify-content: space-between;
+	  width: 90%;
+	  align-items: center;
+  }
+  #winner{
+	  color: #af2d2d;
+	  font-size: 2.1rem;
+	  font-weight: 700;
+	  height: 40px; /*has predetermoned height before textContent is written into*/
+  
+  }
+  #rollBtn{
+	  width: 160px;
+	  min-height: 50px;
+	  border:1px solid #DF2E38;
+	  border-radius: 14px;
+	  background-color: #DF2E38;
+	  margin-top: 20px;
+	  font-size: 1.4rem;
+	  font-weight: 700;
+	  color: white;
+  }
+  #scores{
+	  display: flex;
+	  justify-content: space-between;
+	  width: 100%;
+  }
+  h1{ 
+	margin-top: 3vh;
+	font-size: 1.9rem;
+	font-weight: 700;
+	color: #070a52;
+  }
+  h1+p{  /*targets reset the game p*/
+	font-weight: 700;
+	font-size: 1.10rem;
+	text-transform: uppercase;
+  
+  }
+  #scores div{
+	font-size: 1.10rem;
+	text-transform: uppercase;
+  
+  }
+  #history {
+	color: #247527;
+	font-size: 2.0rem;
+  }
+  ul{
+	height: 20vh;
+	list-style-type: disc !important;
+	overflow-x: auto; /* Enables vertical scrolling only when needed */
+	scrollbar-width: none; 
+	scrollbar-color: #888 #ddd; 
+  }
+  ul li{
+	padding-bottom: 15px;
+	padding-right: 1rem;
+	width: 100%;
+	/* display: list-item; */
+  }
+  #player1Score,#player2Score{
+	padding-left: 7px;
+	color: #FF0202;
+  
+  }
