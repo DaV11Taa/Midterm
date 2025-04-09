@@ -46,9 +46,6 @@ input {
 	justify-content: space-between;
 	align-items: center;
 }
-.row {
-	padding-bottom: 0.1rem;
-}
 .name p,
 .email p,
 .teamSize p,
