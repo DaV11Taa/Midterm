@@ -240,7 +240,7 @@ ul li {
 	width: 100%;
 	/* display: list-item; */
 }
-
+/*  */
 ul li::before {
 	content: "• ";
 	margin-right: 0.5rem;
