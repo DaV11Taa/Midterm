@@ -32,7 +32,7 @@ input {
 	width: 40vw;
 	min-width: 300px;
 	background-color: #fbf8f6;
-	padding: 0.5rem;
+	/* padding: 0.5rem; */
 }
 #registrationForm .header {
 	font-size: 1rem;
@@ -104,6 +104,7 @@ input {
 	background-color: #1f1f21;
 	font-weight: 500;
 	color: #ffffff;
+	margin: 0;
 	/* margin-top: 2rem; */
 }
 label {
