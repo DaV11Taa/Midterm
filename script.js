@@ -25,7 +25,7 @@ const circles = Array.from(dice.querySelectorAll(".circle"));
 const dice2 = document.querySelector(".dice2");
 const circles2 = Array.from(dice2.querySelectorAll(".circle"));
 const winnerAnnouncement = document.querySelector("#winner");
-const reset = document.querySelector("p");
+const reset = document.querySelector("#reset");
 
 // removing middle dot of dice in the beggining
 circles[3].classList.remove("black");
