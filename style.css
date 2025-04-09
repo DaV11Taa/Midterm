@@ -34,7 +34,7 @@ input {
 	background-color: #fbf8f6;
 	padding: 0.5rem;
 }
-.registrationForm .header {
+#registrationForm .header {
 	font-size: 1rem;
 	margin-bottom: 2rem;
 }
@@ -200,13 +200,13 @@ label{
 	  justify-content: space-between;
 	  width: 100%;
   }
-  h1{ 
+  #diceGame h1{ 
 	margin-top: 3vh;
 	font-size: 1.9rem;
 	font-weight: 700;
 	color: #070a52;
   }
-  h1+p{  /*targets reset the game p*/
+  #diceGame h1+p{  /*targets reset the game p*/
 	font-weight: 700;
 	font-size: 1.10rem;
 	text-transform: uppercase;
