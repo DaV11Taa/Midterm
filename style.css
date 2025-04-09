@@ -37,7 +37,7 @@ input {
 #registrationForm .header {
 	font-size: 1rem;
 	margin-top: 0.8rem;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 /* name input styles */
@@ -60,7 +60,6 @@ input {
 .button button {
 	margin-top: 0.5rem;
 	padding: 0.5rem;
-	/* border: 1px solid #d4d4d4; */
 	border-radius: 10px;
 }
 select,
@@ -104,8 +103,6 @@ input {
 	background-color: #1f1f21;
 	font-weight: 500;
 	color: #ffffff;
-	margin: 0;
-	/* margin-top: 2rem; */
 }
 label {
 	cursor: pointer;
