@@ -17,7 +17,7 @@ const emailError = document.getElementById("emailError");
 const passwordError = document.getElementById("passwordError");
 const teamSizeError = document.getElementById("teamSizeError");
 const technologiesError = document.getElementById("technologiesError");
-
+// this is a clone
 // to access the dice page elements
 const rollButton = document.querySelector("#rollBtn");
 const dice = document.querySelector(".dice");
