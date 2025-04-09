@@ -36,8 +36,7 @@ input {
 }
 #registrationForm .header {
 	font-size: 1rem;
-	margin-top: 0.8rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.7rem;
 }
 
 /* name input styles */
@@ -103,6 +102,7 @@ input {
 	background-color: #1f1f21;
 	font-weight: 500;
 	color: #ffffff;
+	margin-top: 0.3rem;
 }
 label {
 	cursor: pointer;
