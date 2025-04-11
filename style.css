@@ -225,10 +225,11 @@ label {
 }
 ul {
 	height: 20vh;
-	list-style-type: disc !important;
+	list-style-type:upper-roman;
 	overflow-x: auto; /* Enables vertical scrolling only when needed */
 	scrollbar-width: none;
 	scrollbar-color: #888 #ddd;
+	padding-left: 20px;
 }
 ul li {
 	padding-bottom: 15px;
@@ -236,11 +237,7 @@ ul li {
 	width: 100%;
 	/* display: list-item; */
 }
-/*  */
-ul li::before {
-	content: "• ";
-	margin-right: 0.5rem;
-}
+
 #player1Score,
 #player2Score {
 	padding-left: 7px;

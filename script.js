@@ -71,12 +71,14 @@ form.addEventListener("submit", (event) => {
 
 rollButton.addEventListener("click", (event) => rolling(circles, circles2));
 reset.addEventListener("click", (event) => {
-	player1_score.textContent = 0;
-	player2_score.textContent = 0;
 	winnerAnnouncement.textContent = "Start the game";
 	resetDice(circles);
 	resetDice(circles2);
 	gameHistory.replaceChildren();
+	score1=0;
+	score2=0
+	player1_score.textContent = score1;
+	player2_score.textContent = score2;
 });
 
 // function to check validity of the firstName
@@ -268,7 +270,7 @@ function rolling(circles, circles2) {
 	let message =
 		"Round " +
 		round +
-		" Player 1 rolled " +
+		": Player 1 rolled " +
 		rolled +
 		",Player 2 rolled " +
 		rolled2;
