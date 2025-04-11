@@ -58,7 +58,7 @@ form.addEventListener("submit", (event) => {
 	if (!checkServices()) isValid = false;
 
 	if (!isValid) {
-		console.log("fuck me :)");
+		console.log("Error");
 	} else {
 		task2.classList.remove("hidden")
 		root.style.fontFamily = "Intel"
