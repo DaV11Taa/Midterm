@@ -35,7 +35,8 @@ input {
 }
 #registrationForm .header {
 	font-size: 1rem;
-	margin-bottom: 0.7rem;
+	margin-bottom: 2rem;
+	margin-top: 1.0rem;
 }
 
 /* name input styles */
@@ -224,11 +225,11 @@ label {
 }
 ul {
 	height: 20vh;
-	list-style-type: disc !important;
+	list-style-type:upper-roman;
 	overflow-x: auto; /* Enables vertical scrolling only when needed */
 	scrollbar-width: none;
 	scrollbar-color: #888 #ddd;
-	padding-left: 1.5rem;
+	padding-left: 20px;
 }
 ul li {
 	padding-bottom: 15px;

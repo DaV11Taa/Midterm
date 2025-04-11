@@ -71,12 +71,15 @@ form.addEventListener("submit", (event) => {
 
 rollButton.addEventListener("click", (event) => rolling(circles, circles2));
 reset.addEventListener("click", (event) => {
-	player1_score.textContent = 0;
-	player2_score.textContent = 0;
 	winnerAnnouncement.textContent = "Start the game";
 	resetDice(circles);
 	resetDice(circles2);
 	gameHistory.replaceChildren();
+	// reseting scores
+	score1=0;
+	score2=0
+	player1_score.textContent = score1;
+	player2_score.textContent = score2;
 });
 
 // function to check validity of the firstName
@@ -268,9 +271,9 @@ function rolling(circles, circles2) {
 	let message =
 		"Round " +
 		round +
-		" Player 1 rolled " +
+		": Player 1 rolled " +
 		rolled +
-		",Player 2 rolled " +
+		", Player 2 rolled " +
 		rolled2;
 	if (rolled == rolled2) {
 		historyRecord(message + "→🤝 It is a Draw!", "Draw");
@@ -278,11 +281,11 @@ function rolling(circles, circles2) {
 	} else if (rolled > rolled2) {
 		score1 += 1;
 		player1_score.textContent = score1;
-		historyRecord(message + "→ 🏆Player 1 Wins!", "Player 1 Won");
+		historyRecord(message + "→ 🏆Player 1 Wins!", "Player 1 Won! 🎉");
 	} else {
 		score2 += 1;
 		player2_score.textContent = score2;
-		historyRecord(message + "→ 🏆Player 2 Wins!", "Player 2 Won");
+		historyRecord(message + "→ 🏆Player 2 Wins!", "Player 2 Won! 🎉");
 	}
 	gameHistory.scrollTop = gameHistory.scrollHeight;
 }
