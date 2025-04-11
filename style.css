@@ -35,7 +35,8 @@ input {
 }
 #registrationForm .header {
 	font-size: 1rem;
-	margin-bottom: 0.7rem;
+	margin-bottom: 2rem;
+	margin-top: 1.0rem;
 }
 
 /* name input styles */
