@@ -32,7 +32,6 @@ input {
 	width: 40vw;
 	min-width: 300px;
 	background-color: #fbf8f6;
-	/* padding: 0.5rem; */
 }
 #registrationForm .header {
 	font-size: 1rem;
@@ -229,7 +228,11 @@ ul {
 	overflow-x: auto; /* Enables vertical scrolling only when needed */
 	scrollbar-width: none;
 	scrollbar-color: #888 #ddd;
+<<<<<<< HEAD
 	padding-left: 20px;
+=======
+	padding-left: 1.5rem;
+>>>>>>> da702266e5df093b53dd373ef85b6193c121dc39
 }
 ul li {
 	padding-bottom: 15px;
@@ -237,7 +240,10 @@ ul li {
 	width: 100%;
 	/* display: list-item; */
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> da702266e5df093b53dd373ef85b6193c121dc39
 #player1Score,
 #player2Score {
 	padding-left: 7px;
