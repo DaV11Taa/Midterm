@@ -35,8 +35,8 @@ input {
 }
 #registrationForm .header {
 	font-size: 1rem;
-	margin-bottom: 2rem;
-	margin-top: 1.0rem;
+	margin-bottom: 6vh;
+	/* margin-top: 1vh; */
 }
 
 /* name input styles */
@@ -57,7 +57,7 @@ input {
 .password input,
 .teamSize select,
 .button button {
-	margin-top: 0.5rem;
+	margin-top: 1vh;
 	padding: 0.5rem;
 	border-radius: 10px;
 }
@@ -81,8 +81,11 @@ input {
 .teamSize select {
 	width: 40%;
 }
+.row{
+	padding-bottom: 2vh;
+}
 .tech-Group {
-	margin-top: 1rem;
+	margin-top: 1vh;
 	width: 60%;
 	gap: 2rem;
 	display: flex;
