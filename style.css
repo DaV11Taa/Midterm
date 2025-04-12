@@ -99,6 +99,7 @@ input {
 }
 .tech-Group-Column input {
 	margin-right: 0.5rem;
+	cursor: pointer;
 }
 .tech-Group-Column div {
 	margin-bottom: 0.7vh
