@@ -47,7 +47,7 @@ input {
 }
 /* form syles */
 #registrationForm {
-	width: 40vw;
+	width: 50vw;
 	min-width: 300px;
 	background-color: var(--form-background-color);
 }
