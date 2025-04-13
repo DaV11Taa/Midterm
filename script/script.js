@@ -3,6 +3,7 @@ const form = document.getElementById("form");
 const task1 = document.getElementById("task1");
 const task2 = document.getElementById("task2");
 const root = document.documentElement
+
 // import all of the variables except of the RadioOptions
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
@@ -10,14 +11,19 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const teamSize = document.getElementById("teamSize");
 
+// setting up default values
+imagePath = "./images/a71b6f2de7c33aac0f7b5825639e860d.png"
+
 // import all of the errors
 const firstNameError = document.getElementById("firstNameError");
 const lastNameError = document.getElementById("lastNameError");
 const emailError = document.getElementById("emailError");
 const passwordError = document.getElementById("passwordError");
 const teamSizeError = document.getElementById("teamSizeError");
-const technologiesError = document.getElementById("technologiesError");
-// this is a clone
+const techImage = document.getElementById("tech-image");
+const techText = document.getElementById("tech-text");
+
+
 // to access the dice page elements
 const rollButton = document.querySelector("#rollBtn");
 const circles = Array.from(document.querySelectorAll(".dice .circle"));
@@ -57,12 +63,18 @@ form.addEventListener("submit", (event) => {
 	if (!isValid) {
 		console.log("Error");
 	} else {
-		task2.classList.remove("hidden")
+		// hide registrationform
+
+		task1.classList.add("hidden")
+		
+		// prepare root styles for dice game part
 		root.style.fontFamily = "Intel"
 		root.style.lineHeight = "100%"
 		root.style.fontWeight = "600px"
-		root.style.color = "#000000"		
-		task1.classList.add("hidden")
+		root.style.color = "#000000"
+		
+		// show dice game
+		task2.classList.remove("hidden")
 	}
 });
 
@@ -74,8 +86,6 @@ reset.addEventListener("click", (event) => {
 	gameHistory.replaceChildren();
 	// reseting scores
 	round=0;
-
-	
 	score1=0;
 	score2=0
 	player1_score.textContent = score1;
@@ -106,7 +116,7 @@ function checkLastName() {
 	}
 }
 
-// function to check validity of the courseLevel
+// function to check validity of the email
 function checkEmail() {
 	// set Error if needed
 	if (!email.value) {
@@ -125,7 +135,7 @@ function checkEmail() {
 	}
 }
 
-// function to check validity of the fullName
+// function to check validity of the password
 function checkPassword() {
 	// set Error if needed
 	if (!password.value) {
@@ -146,7 +156,7 @@ function checkPassword() {
 		}
 	}
 }
-// function to check validity of the fullName
+// function to check validity of the teamSize
 function checkTeamSize() {
 	// set Error if needed
 	if (!teamSize.value) {
@@ -158,55 +168,26 @@ function checkTeamSize() {
 	}
 }
 
-// function to check validity of the agreement
+// function to check validity of the technologies services
 function checkServices() {
-	// set Error if needed
-	// const servicesOptions = document.getElementById("tech-Group");
-	// const services = servicesOptions.querySelectorAll("input");
-
-	// let isChecked = false;
-	// let findservices = [];
-	// findservices = [...services].filter((service) => service.checked);
-	// console.log(findservices);
-	// if (findservices.length >= 3) {
-	// 	isChecked = true;
-	// }
-
-	// if (!isChecked) {
-	// 	let image = document.getElementById("image");
-	// 	let message = document.getElementById("text");
-	// 	image.src = "./a71b6f2de7c33aac0f7b5825639e860d.png";
-	// 	message.textContent = "Choose at least 3 service.";
-	// 	return false;
-	// } else {
-	// 	 	image.src="";
-	// 		message.textContent = "";
-	// 	return true;
-	// } 
-	//eg meore varianti imitom davamate rom consoli errors migdebda
-	const services = document.querySelectorAll("#tech-Group input:checked");
-	const image = document.getElementById("image");
-	const message = document.getElementById("text");
-	const isValid = services.length >= 3;
-
-	if (!isValid) {
-		image.src = "./a71b6f2de7c33aac0f7b5825639e860d.png";
-		document.getElementById("text").textContent = "Choose at least 3 service.";
+	// take all checked elements and check if they are 3 or more
+	if (!(document.querySelectorAll("#tech-Group input:checked").length >= 3)) {
+		// give image source and content
+		techImage.src = imagePath;
+		techText.textContent = "Choose at least 3 service.";
 		return false;
-	}else
-	image.src=""
-	message.textContent = "";
-	return true;
-	//meore variantia migveca src functiis dasawyisshi da display none
-	// ti gvekontrelebina	
-	
+	}else{
+		// remove image source and content
+		techImage.src=""
+		techText.textContent = "";
+		return true;
+	}	
 }
 
 // this is used to set Errors
 function setError(element, elementError, message) {
 	// this is used to set Error message
 	elementError.textContent = message;
-
 	// this is used to add correct style to input box by changing class
 	element.classList.add("invalid");
 	element.classList.remove("normal");

@@ -5,9 +5,8 @@ This project is a two-part interactive web application built using **HTML**, **C
 - 📝 **Registration Form** for creating teams and selecting technologies
 - 🎲 **Dice Game** for a fun two-player experience
 
-## 🚀 Features
-
 ### 📝 Group Form
+
 - First name, last name, email, and password inputs
 - Selectable team size
 - Technology checkboxes (HTML, CSS, JS, React, Figma, GitHub)
@@ -15,6 +14,7 @@ This project is a two-part interactive web application built using **HTML**, **C
 - Submission button to confirm the input
 
 ### 🎲 Dice Game
+
 - Two-player dice rolling mechanic
 - Display scores for both players
 - "ROLL" button to start the game
@@ -41,18 +41,16 @@ This project is a two-part interactive web application built using **HTML**, **C
 
 ## 📷 Screenshots
 
-_You can add screenshots here if needed using:_
-
 ```markdown
-![Form Screenshot](path/to/form-screenshot.png)
-![Dice Game Screenshot](path/to/game-screenshot.png)
+![Form Screenshot](./images/form.PNG)
+![Dice Game Screenshot](./images/diceGame.PNG)
 ```
 
 ## 🧑‍💻 How to Use
 
 1. Clone this repo:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/DaV11Taa/Midterm.git
    ```
 2. Open `index.html` in your browser
 3. Interact with the form and play the dice game
@@ -64,4 +62,4 @@ _You can add screenshots here if needed using:_
 
 ## 📄 License
 
-This project is open-source. Add your preferred license here.
+This project is purely for Educational purposes and to pass Midterm. Do not copy file it goes under plagiarism and copy righting ruls.
