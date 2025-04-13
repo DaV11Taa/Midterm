@@ -45,18 +45,10 @@ input {
 	justify-content: space-between;
 	align-items: center;
 }
-/* #registrationForm  p */
-.name p,
-.email p,
-.teamSize p,
-.password p,
-.technologies p {
+#registrationForm  p  {
 	font-size: 0.81rem;
 }
-/* #registrationForm input:not([type="checkbox"]) */
-.name input,
-.email input,
-.password input,
+#registrationForm input:not([type="checkbox"]),
 .teamSize select,
 .button button {
 	margin-top: 1vh;
@@ -70,15 +62,12 @@ button {
 }
 input {
 	border: 1px solid #d4d4d4;
-	cursor: text;/*that is default behavior*/
 }
 .name {
 	width: 45%;
 }
 
-.name input,
-.email input,
-.password input {
+#registrationForm input:not([type="checkbox"]) {
 	width: 100%;
 }
 .teamSize select {

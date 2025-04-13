@@ -74,6 +74,7 @@ reset.addEventListener("click", (event) => {
 	gameHistory.replaceChildren();
 	// reseting scores
 	round=0;
+
 	
 	score1=0;
 	score2=0
@@ -179,7 +180,8 @@ function checkServices() {
 		message.textContent = "Choose at least 3 service.";
 		return false;
 	} else {
-		technologiesError.textContent = "";
+		 	image.src="";
+			message.textContent = "";
 		return true;
 	} 
 	//eg meore varianti imitom davamate rom consoli errors migdebda
@@ -197,9 +199,7 @@ function checkServices() {
 	// message.textContent = "";
 	// return true;
 	//meore variantia migveca src functiis dasawyisshi da display none
-	// ti gvekontrelebina
-
-	
+	// ti gvekontrelebina	
 	
 }
 
@@ -272,50 +272,6 @@ function algorithm(circles) {
 	}
 	return point;
 }
-// function algorithm(circles) {
-
-// 	// Reset all circles first (remove all black classes)
-// 	circles.forEach((circle) => circle.classList.remove("black"));
-// 	const point = Math.floor(Math.random() * 6) + 1;
-
-// 	switch (point) {
-// 		case 1:
-// 		circles[3].classList.add("black"); // Only middle dot
-// 		break;
-
-// 		case 2:
-// 		circles[0].classList.add("black");
-// 		circles[6].classList.add("black");
-// 		break;
-
-// 		case 3:
-// 		circles[0].classList.add("black");
-// 		circles[3].classList.add("black");
-// 		circles[6].classList.add("black");
-
-// 		break;
-// 		case 4:
-// 		circles.forEach((c, i) => {
-// 			if (i !== 2 && i !== 3 && i !== 4 ) c.classList.add("black");
-// 		});
-// 		break;
-
-// 		case 5:
-// 		circles.forEach((c, i) => {
-// 			if (i !== 2 && i !== 4 ) c.classList.add("black");
-// 		});
-// 		break;
-
-// 		case 6:
-// 		circles.forEach((c, i) => {
-// 			if (i !== 3) c.classList.add("black");
-// 		});
-// 		break;
-// 	}
-// 	console.log(point);
-	
-// 	return point;
-// }
 
 // this function records played rounds
 function historyRecord(message, winner) {
