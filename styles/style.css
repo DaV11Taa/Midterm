@@ -1,4 +1,4 @@
-:root{
+:root {
 	--form-background-color: #fbf8f6;
 	--form-border-color: #d4d4d4;
 	--form-button-bg-color: #1f1f21;
@@ -62,7 +62,7 @@ input {
 	justify-content: space-between;
 	align-items: center;
 }
-#registrationForm  p  {
+#registrationForm p {
 	font-size: 2vh;
 }
 #registrationForm input:not([type="checkbox"]),
@@ -81,10 +81,13 @@ button {
 input {
 	border: 1px solid var(--form-border-color);
 }
-
+option {
+	font-size: 2vh;
+	width: 100%;
+}
 /* ------------------check box styles------------------- */
 
-input[type="checkbox"]{
+input[type="checkbox"] {
 	display: inline;
 	position: relative;
 	appearance: none;
@@ -94,12 +97,12 @@ input[type="checkbox"]{
 	border-radius: 0.5vh;
 }
 
-input[type="checkbox"]:checked{
+input[type="checkbox"]:checked {
 	background-color: transparent;
 }
 
-input[type="checkbox"]:checked::after{
-	content: '✔';
+input[type="checkbox"]:checked::after {
+	content: "✔";
 	color: grey;
 	font-size: 1.6vh;
 	position: absolute;
@@ -119,7 +122,7 @@ input[type="checkbox"]:checked::after{
 .teamSize select {
 	width: 40%;
 }
-.row{
+.row {
 	padding-bottom: 2vh;
 }
 .tech-Group {
@@ -140,7 +143,7 @@ input[type="checkbox"]:checked::after{
 	cursor: pointer;
 }
 .tech-Group-Column div {
-	margin-bottom: 1vh
+	margin-bottom: 1vh;
 }
 .button button {
 	margin: 0;
@@ -165,7 +168,8 @@ label {
 	border: 1.5px solid var(--form-invalid-color);
 	box-shadow: 2px 2px 5.1px 0 var(--form-invalid-color-shadow);
 }
-.tech-Group-Column > div ,#technologiesError {
+.tech-Group-Column > div,
+#technologiesError {
 	display: flex;
 	align-items: center;
 }
@@ -261,11 +265,11 @@ label {
 	font-size: 2.5vh;
 	text-transform: uppercase;
 	border-bottom: 0.5vh solid transparent;
-	transition:  0.3s;
+	transition: 0.3s;
 	cursor: pointer;
 }
-#reset:hover{
-	border-color: var(--diceGame-roll-button-color) ;
+#reset:hover {
+	border-color: var(--diceGame-roll-button-color);
 }
 
 #scores div {
@@ -281,7 +285,7 @@ ul {
 
 	overflow-y: scroll; /* Enables vertical scrolling only when needed */
 	scrollbar-width: none;
-	
+
 	padding-left: 3vh;
 }
 ul li {
