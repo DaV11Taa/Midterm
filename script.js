@@ -146,7 +146,6 @@ function checkPassword() {
 		}
 	}
 }
-
 // function to check validity of the fullName
 function checkTeamSize() {
 	// set Error if needed
@@ -162,42 +161,42 @@ function checkTeamSize() {
 // function to check validity of the agreement
 function checkServices() {
 	// set Error if needed
-	const servicesOptions = document.getElementById("tech-Group");
-	const services = servicesOptions.querySelectorAll("input");
+	// const servicesOptions = document.getElementById("tech-Group");
+	// const services = servicesOptions.querySelectorAll("input");
 
-	let isChecked = false;
-	let findservices = [];
-	findservices = [...services].filter((service) => service.checked);
-	console.log(findservices);
-	if (findservices.length >= 3) {
-		isChecked = true;
-	}
+	// let isChecked = false;
+	// let findservices = [];
+	// findservices = [...services].filter((service) => service.checked);
+	// console.log(findservices);
+	// if (findservices.length >= 3) {
+	// 	isChecked = true;
+	// }
 
-	if (!isChecked) {
-		let image = document.getElementById("image");
-		let message = document.getElementById("text");
-		image.src = "./a71b6f2de7c33aac0f7b5825639e860d.png";
-		message.textContent = "Choose at least 3 service.";
-		return false;
-	} else {
-		 	image.src="";
-			message.textContent = "";
-		return true;
-	} 
-	//eg meore varianti imitom davamate rom consoli errors migdebda
-	// const services = document.querySelectorAll("#tech-Group input:checked");
-	// const image = document.getElementById("image");
-	// const message = document.getElementById("text");
-	// const isValid = services.length >= 3;
-
-	// if (!isValid) {
+	// if (!isChecked) {
+	// 	let image = document.getElementById("image");
+	// 	let message = document.getElementById("text");
 	// 	image.src = "./a71b6f2de7c33aac0f7b5825639e860d.png";
-	// 	document.getElementById("text").textContent = "Choose at least 3 service.";
+	// 	message.textContent = "Choose at least 3 service.";
 	// 	return false;
-	// }else
-	// image.src=""
-	// message.textContent = "";
-	// return true;
+	// } else {
+	// 	 	image.src="";
+	// 		message.textContent = "";
+	// 	return true;
+	// } 
+	//eg meore varianti imitom davamate rom consoli errors migdebda
+	const services = document.querySelectorAll("#tech-Group input:checked");
+	const image = document.getElementById("image");
+	const message = document.getElementById("text");
+	const isValid = services.length >= 3;
+
+	if (!isValid) {
+		image.src = "./a71b6f2de7c33aac0f7b5825639e860d.png";
+		document.getElementById("text").textContent = "Choose at least 3 service.";
+		return false;
+	}else
+	image.src=""
+	message.textContent = "";
+	return true;
 	//meore variantia migveca src functiis dasawyisshi da display none
 	// ti gvekontrelebina	
 	
@@ -272,7 +271,6 @@ function algorithm(circles) {
 	}
 	return point;
 }
-
 // this function records played rounds
 function historyRecord(message, winner) {
 	let update = document.createElement("li");
