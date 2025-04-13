@@ -47,14 +47,13 @@ input {
 }
 /* form syles */
 #registrationForm {
-	width: 50vw;
+	width: 40vw;
 	min-width: 300px;
 	background-color: var(--form-background-color);
 }
 #registrationForm .header {
-	font-size: 1rem;
+	font-size: 4vh;
 	margin-bottom: 3vh;
-	margin-top: 3vh;
 }
 
 /* name input styles */
@@ -64,14 +63,15 @@ input {
 	align-items: center;
 }
 #registrationForm  p  {
-	font-size: 0.81rem;
+	font-size: 2vh;
 }
 #registrationForm input:not([type="checkbox"]),
 .teamSize select,
 .button button {
 	margin-top: 1vh;
-	padding: 0.5rem;
-	border-radius: 10px;
+	padding: 1.5vh;
+	border-radius: 1.5vh;
+	font-size: 2vh;
 }
 select,
 button {
@@ -88,10 +88,10 @@ input[type="checkbox"]{
 	display: inline;
 	position: relative;
 	appearance: none;
-	width: 0.81rem;
-	height: 0.81rem;
+	width: 2vh;
+	height: 2vh;
 	border: 1px solid var(--form-border-color);
-	border-radius: 0.2rem;
+	border-radius: 0.5vh;
 }
 
 input[type="checkbox"]:checked{
@@ -101,10 +101,10 @@ input[type="checkbox"]:checked{
 input[type="checkbox"]:checked::after{
 	content: '✔';
 	color: grey;
-	font-size: 0.51rem;
+	font-size: 1.6vh;
 	position: absolute;
-	left: 20%;
-    /* line-height: 1; */
+	left: 10%;
+	top: -15%;
 }
 
 /* ------------------check box styles------------------- */
@@ -125,11 +125,11 @@ input[type="checkbox"]:checked::after{
 .tech-Group {
 	margin-top: 1vh;
 	width: 60%;
-	gap: 2rem;
+	gap: 2vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-size: 0.81rem;
+	font-size: 2vh;
 }
 .tech-Group-Column {
 	display: flex;
@@ -146,7 +146,7 @@ input[type="checkbox"]:checked::after{
 	margin: 0;
 	width: 100%;
 	background-color: var(--form-button-bg-color);
-	font-weight: 500;
+	/* font-weight: 500; */
 	color: var(--form-background-color);
 }
 label {
@@ -154,8 +154,8 @@ label {
 }
 .error {
 	color: var(--form-error-color);
-	font-size: 12px;
-	height: 17px;
+	font-size: 1.8vh;
+	height: 1.8vh;
 }
 .normal {
 	border: 1px solid var(--form-border-color);
@@ -170,7 +170,7 @@ label {
 	align-items: center;
 }
 #technologiesError img {
-	height: 13px;
+	height: 1.8vh;
 	margin-right: 0.7rem;
 }
 .hidden {
