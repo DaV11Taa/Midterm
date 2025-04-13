@@ -154,8 +154,8 @@ label {
 }
 .error {
 	color: var(--form-error-color);
-	font-size: 1.8vh;
-	height: 1.8vh;
+	font-size: 1.7vh;
+	height: 2vh;
 }
 .normal {
 	border: 1px solid var(--form-border-color);
@@ -173,6 +173,11 @@ label {
 	height: 1.8vh;
 	margin-right: 0.7rem;
 }
+#technologiesError p {
+	color: var(--form-error-color);
+	font-size: 1.7vh;
+	height: 2vh;
+}
 .hidden {
 	display: none;
 }
@@ -183,29 +188,29 @@ label {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 50%;
+	width: 40vw;
 	min-width: 400px;
 	justify-content: space-around;
-	max-height: 850px;
+	/* max-height: 850px; */
 	height: 100vh;
 }
 .dice,
 .dice2 {
-	width: 98px;
-	height: 98px;
+	width: 15vh;
+	height: 15vh;
 	background-color: var(--diceGame-dice-color);
-	border: 2px solid var(--diceGame-dice-dot-color);
-	border-radius: 10px;
+	border: 0.3vh solid var(--diceGame-dice-dot-color);
+	border-radius: 2vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	padding: 7px;
-	box-shadow: 8px 8px var(--diceGame-dice-dot-color);
+	padding: 1vh;
+	box-shadow: 1vh 1vh var(--diceGame-dice-dot-color);
 }
 .circle {
-	width: 18px;
-	height: 18px;
-	border-radius: 9px;
+	width: 3vh;
+	height: 3vh;
+	border-radius: 1.5vh;
 }
 .black {
 	background-color: var(--diceGame-dice-dot-color); /*added to circles in dice*/
@@ -224,19 +229,20 @@ label {
 }
 #winner {
 	color: var(--diceGame-winner-text-color);
-	font-size: 2.1rem;
+	font-size: 4.5vh;
 	font-weight: 700;
-	height: 40px; /*has predetermoned height before textContent is written into*/
+	height: 5vh; /*has predetermoned height before textContent is written into*/
 }
 #rollBtn {
-	width: 160px;
-	height: 50px;
-	border: 1px solid var(--diceGame-roll-button-color);
-	border-radius: 14px;
+	/* width: 160px; */
+	/* height: 50px; */
+	border: 0.3vh solid var(--diceGame-roll-button-color);
+	border-radius: 2vh;
 	background-color: var(--diceGame-roll-button-color);
 	margin-top: 20px;
-	font-size: 1.4rem;
+	font-size: 4vh;
 	font-weight: 700;
+	padding: 1vh 6vh;
 	color: var(--diceGame-dice-color);
 }
 #scores {
@@ -245,16 +251,16 @@ label {
 	width: 100%;
 }
 #diceGame h1 {
-	margin-top: 3vh;
-	font-size: 1.9rem;
+	margin-top: 2vh;
+	font-size: 4vh;
 	font-weight: 700;
 	color: var(--diceGame-header-color);
 }
 #reset {
 	font-weight: 700;
-	font-size: 1.1rem;
+	font-size: 2.5vh;
 	text-transform: uppercase;
-	border-bottom: 3px solid transparent;
+	border-bottom: 0.5vh solid transparent;
 	transition:  0.3s;
 	cursor: pointer;
 }
@@ -263,12 +269,12 @@ label {
 }
 
 #scores div {
-	font-size: 1.1rem;
+	font-size: 2.5vh;
 	text-transform: uppercase;
 }
 #history {
 	color: var(--diceGame-history-text-color);
-	font-size: 2rem;
+	font-size: 5vh;
 }
 ul {
 	height: 20vh;
@@ -276,12 +282,13 @@ ul {
 	overflow-y: scroll; /* Enables vertical scrolling only when needed */
 	scrollbar-width: none;
 	
-	padding-left: 20px;
+	padding-left: 3vh;
 }
 ul li {
-	padding-bottom: 15px;
+	padding-bottom: 1vh;
 	padding-right: 1rem;
 	width: 100%;
+	font-size: 2.5vh;
 }
 #player1Score,
 #player2Score {
