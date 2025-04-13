@@ -81,6 +81,34 @@ button {
 input {
 	border: 1px solid var(--form-border-color);
 }
+
+/* ------------------check box styles------------------- */
+
+input[type="checkbox"]{
+	display: inline;
+	position: relative;
+	appearance: none;
+	width: 0.81rem;
+	height: 0.81rem;
+	border: 1px solid var(--form-border-color);
+	border-radius: 0.2rem;
+}
+
+input[type="checkbox"]:checked{
+	background-color: transparent;
+}
+
+input[type="checkbox"]:checked::after{
+	content: '✔';
+	color: grey;
+	font-size: 0.51rem;
+	position: absolute;
+	left: 20%;
+    /* line-height: 1; */
+}
+
+/* ------------------check box styles------------------- */
+
 .name {
 	width: 45%;
 }
