@@ -65,12 +65,18 @@ form.addEventListener("submit", (event) => {
     // hide registrationform
 
     task1.classList.add("hidden");
-
-    // prepare root styles for dice game part
-    root.style.fontFamily = "Intel";
-    root.style.lineHeight = "100%";
-    root.style.fontWeight = "600px";
-    root.style.color = "#000000";
+	
+	const style = document.createElement('style');
+	style.textContent = `
+	* {
+		margin: 0px;          /* Changed from 0 */
+		padding: 0px;         /* Changed from 0 */
+		box-sizing: border-box; /* Changed from border-box */
+		font-family: Inter; /* Changed from Poppins */
+		font-weight: 600;     /* Changed from 500 */
+	}
+	`;
+	document.head.appendChild(style);
 
     // show dice game
     task2.classList.remove("hidden");

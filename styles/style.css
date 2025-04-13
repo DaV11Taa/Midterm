@@ -237,7 +237,7 @@ label {
 	margin-top: 20px;
 	font-size: 1.4rem;
 	font-weight: 700;
-	color: var(--diceGame-background-color);
+	color: var(--diceGame-dice-color);
 }
 #scores {
 	display: flex;
