@@ -244,8 +244,10 @@ label {
 }
 ul {
 	height: 20vh;
-	overflow-x: auto; /* Enables vertical scrolling only when needed */
+
+	overflow-y: scroll; /* Enables vertical scrolling only when needed */
 	scrollbar-width: none;
+	
 	padding-left: 20px;
 }
 ul li {
