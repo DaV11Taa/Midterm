@@ -20,16 +20,13 @@ const technologiesError = document.getElementById("technologiesError");
 // this is a clone
 // to access the dice page elements
 const rollButton = document.querySelector("#rollBtn");
-const dice = document.querySelector(".dice");
-const circles = Array.from(dice.querySelectorAll(".circle"));
-const dice2 = document.querySelector(".dice2");
-const circles2 = Array.from(dice2.querySelectorAll(".circle"));
+const circles = Array.from(document.querySelectorAll(".dice .circle"));
+const circles2 = Array.from(document.querySelectorAll(".dice2 .circle"));
 const winnerAnnouncement = document.querySelector("#winner");
 const reset = document.querySelector("#reset");
 
 // removing middle dot of dice in the beggining
-circles[3].classList.remove("black");
-circles2[3].classList.remove("black");
+
 const gameHistory = document.querySelector("ul");
 
 // this is to access the score board
@@ -167,8 +164,8 @@ function checkServices() {
 
 	let isChecked = false;
 	let findservices = [];
-	let o = 3;
 	findservices = [...services].filter((service) => service.checked);
+	console.log(findservices);
 	if (findservices.length >= 3) {
 		isChecked = true;
 	}
@@ -182,7 +179,26 @@ function checkServices() {
 	} else {
 		technologiesError.textContent = "";
 		return true;
-	}
+	} 
+	//eg meore varianti imitom davamate rom consoli errors migdebda
+	// const services = document.querySelectorAll("#tech-Group input:checked");
+	// const image = document.getElementById("image");
+	// const message = document.getElementById("text");
+	// const isValid = services.length >= 3;
+
+	// if (!isValid) {
+	// 	image.src = "./a71b6f2de7c33aac0f7b5825639e860d.png";
+	// 	document.getElementById("text").textContent = "Choose at least 3 service.";
+	// 	return false;
+	// }else
+	// image.src=""
+	// message.textContent = "";
+	// return true;
+	//meore variantia migveca src functiis dasawyisshi da display none
+	// ti gvekontrelebina
+
+	
+	
 }
 
 // this is used to set Errors
@@ -207,50 +223,97 @@ function clearError(element, elementError) {
 
 // this function rolls dice by 
 function algorithm(circles) {
-
-	// Reset all circles first (remove all black classes)
-	Array.from(circles).forEach((circle) => circle.classList.remove("black"));
 	const point = Math.floor(Math.random() * 6) + 1;
 
-	// this is slightly more time efficient approach than from previous version
-	// switch based on the point adds class black to circles and make them visible
-	// note for me,insted class black I coumd use display hidden
 	switch (point) {
 		case 1:
-		circles[3].classList.add("black"); // Only middle dot
-		break;
+			circles.forEach((c, i) => {
+				if (i === 3) c.classList.add("black");
+				else c.classList.remove("black");
+			});
+			break;
 
 		case 2:
-		circles[0].classList.add("black");
-		circles[6].classList.add("black");
-		break;
+			circles.forEach((c, i) => {
+				if (i === 0 || i === 6) c.classList.add("black");
+				else c.classList.remove("black");
+			});
+			break;
 
 		case 3:
-		circles[0].classList.add("black");
-		circles[3].classList.add("black");
-		circles[6].classList.add("black");
+			circles.forEach((c, i) => {
+				if (i === 0 || i === 3 || i === 6) c.classList.add("black");
+				else c.classList.remove("black");
+			});
+			break;
 
-		break;
 		case 4:
-		circles.forEach((c, i) => {
-			if (i !== 2 && i !== 3 && i !== 4 && i !== 7) c.classList.add("black");
-		});
-		break;
+			circles.forEach((c, i) => {
+				if (i !== 2 && i !== 3 && i !== 4) c.classList.add("black");
+				else c.classList.remove("black");
+			});
+			break;
 
 		case 5:
-		circles.forEach((c, i) => {
-			if (i !== 2 && i !== 4 && i !== 7) c.classList.add("black");
-		});
-		break;
+			circles.forEach((c, i) => {
+				if (i !== 2 && i !== 4 ) c.classList.add("black");
+				else c.classList.remove("black");
+			});
+			break;
 
 		case 6:
-		circles.forEach((c, i) => {
-			if (i !== 3) c.classList.add("black");
-		});
-		break;
+			circles.forEach((c, i) => {
+				if (i !== 3) c.classList.add("black");
+				else c.classList.remove("black");
+			});
+			break;
 	}
 	return point;
 }
+// function algorithm(circles) {
+
+// 	// Reset all circles first (remove all black classes)
+// 	circles.forEach((circle) => circle.classList.remove("black"));
+// 	const point = Math.floor(Math.random() * 6) + 1;
+
+// 	switch (point) {
+// 		case 1:
+// 		circles[3].classList.add("black"); // Only middle dot
+// 		break;
+
+// 		case 2:
+// 		circles[0].classList.add("black");
+// 		circles[6].classList.add("black");
+// 		break;
+
+// 		case 3:
+// 		circles[0].classList.add("black");
+// 		circles[3].classList.add("black");
+// 		circles[6].classList.add("black");
+
+// 		break;
+// 		case 4:
+// 		circles.forEach((c, i) => {
+// 			if (i !== 2 && i !== 3 && i !== 4 ) c.classList.add("black");
+// 		});
+// 		break;
+
+// 		case 5:
+// 		circles.forEach((c, i) => {
+// 			if (i !== 2 && i !== 4 ) c.classList.add("black");
+// 		});
+// 		break;
+
+// 		case 6:
+// 		circles.forEach((c, i) => {
+// 			if (i !== 3) c.classList.add("black");
+// 		});
+// 		break;
+// 	}
+// 	console.log(point);
+	
+// 	return point;
+// }
 
 // this function records played rounds
 function historyRecord(message, winner) {

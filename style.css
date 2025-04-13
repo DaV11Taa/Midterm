@@ -35,8 +35,8 @@ input {
 }
 #registrationForm .header {
 	font-size: 1rem;
-	margin-bottom: 6vh;
-	/* margin-top: 1vh; */
+	margin-bottom: 3vh;
+	margin-top: 3vh;
 }
 
 /* name input styles */
@@ -45,6 +45,7 @@ input {
 	justify-content: space-between;
 	align-items: center;
 }
+/* #registrationForm  p */
 .name p,
 .email p,
 .teamSize p,
@@ -52,6 +53,7 @@ input {
 .technologies p {
 	font-size: 0.81rem;
 }
+/* #registrationForm input:not([type="checkbox"]) */
 .name input,
 .email input,
 .password input,
@@ -68,11 +70,12 @@ button {
 }
 input {
 	border: 1px solid #d4d4d4;
-	cursor: text;
+	cursor: text;/*that is default behavior*/
 }
 .name {
 	width: 45%;
 }
+
 .name input,
 .email input,
 .password input {
@@ -127,9 +130,10 @@ label {
 	border: 1.5px solid #eaccc9;
 	box-shadow: 2px 2px 5.1px 0 #ebcdca;
 }
-.tech-Group-Column > div {
+.tech-Group-Column > div ,#technologiesError {
 	display: flex;
-}
+	align-items: center;
+}/* 130 xazze da */
 #technologiesError img {
 	height: 13px;
 	margin-right: 0.7rem;
@@ -142,14 +146,14 @@ label {
 
 .container {
 	/* holds all game elements */
-	padding: 15px 15px 15px 18px;
+	/* padding: 15px 15px 15px 18px; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 50%;
 	min-width: 400px;
 	justify-content: space-around;
-	max-height: 700px;
+	max-height: 850px;
 	height: 100vh;
 }
 .dice,
@@ -193,7 +197,7 @@ label {
 }
 #rollBtn {
 	width: 160px;
-	min-height: 50px;
+	height: 50px;
 	border: 1px solid #df2e38;
 	border-radius: 14px;
 	background-color: #df2e38;
@@ -217,9 +221,12 @@ label {
 	font-weight: 700;
 	font-size: 1.1rem;
 	text-transform: uppercase;
+	border-bottom: 3px solid transparent;
+	transition:  0.3s;
+	cursor: pointer;
 }
 #reset:hover{
-	cursor: pointer;
+	border-color: black ;
 }
 
 #scores div {
@@ -232,7 +239,7 @@ label {
 }
 ul {
 	height: 20vh;
-	list-style-type:upper-roman;
+
 	overflow-x: auto; /* Enables vertical scrolling only when needed */
 	scrollbar-width: none;
 	scrollbar-color: #888 #ddd;
