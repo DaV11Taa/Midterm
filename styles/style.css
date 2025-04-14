@@ -49,7 +49,9 @@ input {
 #registrationForm {
 	width: 40vw;
 	min-width:40vh;
+	min-height: 45vw;
 	background-color: var(--form-background-color);
+	
 }
 #registrationForm .header {
 	font-size: 3.5vh;
@@ -82,14 +84,12 @@ button {
 input {
 	border: 1px solid var(--form-border-color);
 }
-option {
-	font-size: 2vh;
-	width: 100%;
-}
+/* option {
+	font-size: 1vh;
+} */
 /* ------------------check box styles------------------- */
 
 input[type="checkbox"] {
-	display: inline;
 	position: relative;
 	appearance: none;
 	width: 2vh;
@@ -150,7 +150,6 @@ input[type="checkbox"]:checked::after {
 	margin: 0;
 	width: 100%;
 	background-color: var(--form-button-bg-color);
-	/* font-weight: 500; */
 	color: var(--form-background-color);
 }
 label {
@@ -161,14 +160,15 @@ label {
 	font-size: 1.7vh;
 	height: 2vh;
 }
+
 .normal {
-	border: 1px solid var(--form-border-color);
+	border: 0.1vh solid var(--form-border-color);
 	box-shadow: none;
-}
-.invalid {
-	border: 1.5px solid var(--form-invalid-color);
+  }
+  .invalid {
+	border: 0.1vh solid var(--form-invalid-color);
 	box-shadow: 2px 2px 5.1px 0 var(--form-invalid-color-shadow);
-}
+  }
 .tech-Group-Column > div,
 #technologiesError {
 	display: flex;
@@ -196,7 +196,6 @@ label {
 	width: 40vw;
 	min-width: 45vh;
 	justify-content: space-around;
-	/* max-height: 850px; */
 	height: 100vh;
 }
 .dice,
@@ -250,11 +249,6 @@ label {
 	padding: 1vh 6vh;
 	color: var(--diceGame-dice-color);
 }
-#scores {
-	display: flex;
-	justify-content: space-around;
-	width: 100%;
-}
 #diceGame h1 {
 	margin-top: 2vh;
 	font-size: 4vh;
@@ -272,10 +266,21 @@ label {
 #reset:hover {
 	border-color: var(--diceGame-roll-button-color);
 }
+#scores {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	
+}
 
 #scores div {
 	font-size: 2.5vh;
 	text-transform: uppercase;
+	text-wrap: nowrap;
+
+	/* text-wrap:none;
+	align-self:flex-end ; */
+	
 }
 #history {
 	color: var(--diceGame-history-text-color);

@@ -2,7 +2,6 @@
 const form = document.getElementById("form");
 const task1 = document.getElementById("task1");
 const task2 = document.getElementById("task2");
-const root = document.documentElement;
 
 // import all of the variables except of the RadioOptions
 const firstName = document.getElementById("firstName");
