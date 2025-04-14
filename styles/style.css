@@ -269,7 +269,6 @@ label {
 #scores div {
   font-size: 2.5vh;
   text-transform: uppercase;
-  text-wrap: nowrap;
 }
 #history {
   color: var(--diceGame-history-text-color);
