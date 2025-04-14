@@ -1,307 +1,296 @@
 :root {
-	--form-background-color: #fbf8f6;
-	--form-border-color: #d4d4d4;
-	--form-button-bg-color: #1f1f21;
-	--form-error-color: #cc777b;
-	--form-invalid-color: #eaccc9;
-	--form-invalid-color-shadow: #ebcdca;
-	--diceGame-background-color: #d9d9d9;
-	--diceGame-color: #333;
-	--diceGame-dice-color: #ffffff;
-	--diceGame-dice-dot-color: #000000;
-	--diceGame-winner-text-color: #af2d2d;
-	--diceGame-roll-button-color: #df2e38;
-	--diceGame-header-color: #070a52;
-	--diceGame-history-text-color: #247527;
-	--diceGame-score-color: #ff0202;
+  --form-background-color: #fbf8f6;
+  --form-border-color: #d4d4d4;
+  --form-button-bg-color: #1f1f21;
+  --form-error-color: #cc777b;
+  --form-invalid-color: #eaccc9;
+  --form-invalid-color-shadow: #ebcdca;
+  --diceGame-background-color: #d9d9d9;
+  --diceGame-color: #333;
+  --diceGame-dice-color: #ffffff;
+  --diceGame-dice-dot-color: #000000;
+  --diceGame-winner-text-color: #af2d2d;
+  --diceGame-roll-button-color: #df2e38;
+  --diceGame-header-color: #070a52;
+  --diceGame-history-text-color: #247527;
+  --diceGame-score-color: #ff0202;
 }
 
 /* default values */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
-	font-weight: 500;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 body {
-	background-color: var(--form-background-color);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
+  background-color: var(--form-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 #diceGame {
-	/* setting background and centering content */
-	line-height: 1.6;
-	color: var(--diceGame-color);
-	background-color: var(--diceGame-background-color);
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  /* setting background and centering content */
+  line-height: 1.6;
+  color: var(--diceGame-color);
+  background-color: var(--diceGame-background-color);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 input {
-	outline: none;
+  outline: none;
 }
 /* form syles */
 #registrationForm {
-	width: 40vw;
-	min-width:40vh;
-	min-height: 45vw;
-	background-color: var(--form-background-color);
-	
+  width: 40vw;
+  min-width: 40vh;
+  min-height: 45vw;
+  background-color: var(--form-background-color);
 }
 #registrationForm .header {
-	font-size: 3.5vh;
-	margin-bottom: 3vh;
-	white-space: nowrap; 
+  font-size: 3.5vh;
+  margin-bottom: 3vh;
+  white-space: nowrap;
 }
 
 /* name input styles */
 .fullName {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #registrationForm p {
-	font-size: 2vh;
+  font-size: 2vh;
 }
 #registrationForm input:not([type="checkbox"]),
 .teamSize select,
 .button button {
-	margin-top: 1vh;
-	padding: 1.5vh;
-	border-radius: 1.5vh;
-	font-size: 2vh;
+  margin-top: 1vh;
+  padding: 1.5vh;
+  border-radius: 1.5vh;
+  font-size: 2vh;
 }
 select,
 button {
-	border: 1px solid var(--form-border-color);
-	cursor: pointer;
+  border: 1px solid var(--form-border-color);
+  cursor: pointer;
 }
 input {
-	border: 1px solid var(--form-border-color);
+  border: 1px solid var(--form-border-color);
 }
-/* option {
-	font-size: 1vh;
-} */
 /* ------------------check box styles------------------- */
 
 input[type="checkbox"] {
-	position: relative;
-	appearance: none;
-	width: 2vh;
-	height: 2vh;
-	border: 1px solid var(--form-border-color);
-	border-radius: 0.5vh;
+  position: relative;
+  appearance: none;
+  width: 2vh;
+  height: 2vh;
+  border: 1px solid var(--form-border-color);
+  border-radius: 0.5vh;
 }
 
 input[type="checkbox"]:checked {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 input[type="checkbox"]:checked::after {
-	content: "✔";
-	color: grey;
-	font-size: 1.6vh;
-	position: absolute;
-	left: 10%;
-	top: -15%;
+  content: "✔";
+  color: grey;
+  font-size: 1.6vh;
+  position: absolute;
+  left: 10%;
+  top: -15%;
 }
 
 /* ------------------check box styles------------------- */
 
 .name {
-	width: 45%;
+  width: 45%;
 }
 
 #registrationForm input:not([type="checkbox"]) {
-	width: 100%;
+  width: 100%;
 }
 .teamSize select {
-	width: 40%;
+  width: 40%;
 }
 .row {
-	padding-bottom: 2vh;
+  padding-bottom: 2vh;
 }
 .tech-Group {
-	margin-top: 1vh;
-	width: 60%;
-	gap: 2vh;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	font-size: 2vh;
+  margin-top: 1vh;
+  width: 60%;
+  gap: 2vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2vh;
 }
 .tech-Group-Column {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .tech-Group-Column input {
-	margin-right: 0.5rem;
-	cursor: pointer;
+  margin-right: 0.5rem;
+  cursor: pointer;
 }
 .tech-Group-Column div {
-	margin-bottom: 1vh;
+  margin-bottom: 1vh;
 }
 .button button {
-	margin: 0;
-	width: 100%;
-	background-color: var(--form-button-bg-color);
-	color: var(--form-background-color);
+  margin: 0;
+  width: 100%;
+  background-color: var(--form-button-bg-color);
+  color: var(--form-background-color);
 }
 label {
-	cursor: pointer;
+  cursor: pointer;
 }
 .error {
-	color: var(--form-error-color);
-	font-size: 1.7vh;
-	height: 2vh;
+  color: var(--form-error-color);
+  font-size: 1.7vh;
+  height: 2vh;
 }
 
 .normal {
-	border: 0.1vh solid var(--form-border-color);
-	box-shadow: none;
-  }
-  .invalid {
-	border: 0.1vh solid var(--form-invalid-color);
-	box-shadow: 2px 2px 5.1px 0 var(--form-invalid-color-shadow);
-  }
+  border: 0.1vh solid var(--form-border-color);
+  box-shadow: none;
+}
+.invalid {
+  border: 0.1vh solid var(--form-invalid-color);
+  box-shadow: 2px 2px 5.1px 0 var(--form-invalid-color-shadow);
+}
 .tech-Group-Column > div,
 #technologiesError {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 #technologiesError img {
-	height: 1.8vh;
-	margin-right: 0.7rem;
+  height: 1.8vh;
+  margin-right: 0.7rem;
 }
 #technologiesError p {
-	color: var(--form-error-color);
-	font-size: 1.7vh;
-	height: 2vh;
+  color: var(--form-error-color);
+  font-size: 1.7vh;
+  height: 2vh;
 }
 .hidden {
-	display: none;
+  display: none;
 }
 
 /* --------------Dice Game------------------ */
 
 .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 40vw;
-	min-width: 45vh;
-	justify-content: space-around;
-	height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  min-width: 45vh;
+  justify-content: space-around;
+  height: 100vh;
 }
 .dice,
 .dice2 {
-	width: 15vh;
-	height: 15vh;
-	background-color: var(--diceGame-dice-color);
-	border: 0.3vh solid var(--diceGame-dice-dot-color);
-	border-radius: 2vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	padding: 1vh;
-	box-shadow: 1vh 1vh var(--diceGame-dice-dot-color);
+  width: 15vh;
+  height: 15vh;
+  background-color: var(--diceGame-dice-color);
+  border: 0.3vh solid var(--diceGame-dice-dot-color);
+  border-radius: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1vh;
+  box-shadow: 1vh 1vh var(--diceGame-dice-dot-color);
 }
 .circle {
-	width: 3vh;
-	height: 3vh;
-	border-radius: 1.5vh;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 1.5vh;
 }
 .black {
-	background-color: var(--diceGame-dice-dot-color); /*added to circles in dice*/
+  background-color: var(--diceGame-dice-dot-color); /*added to circles in dice*/
 }
 .dice > div,
 .dice2 > div {
-	/* targets each row of circles in the dice*/
-	display: flex;
-	justify-content: space-between;
+  /* targets each row of circles in the dice*/
+  display: flex;
+  justify-content: space-between;
 }
 .dices {
-	display: flex;
-	justify-content: space-between;
-	width: 90%;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  align-items: center;
 }
 #winner {
-	color: var(--diceGame-winner-text-color);
-	font-size: 4.5vh;
-	font-weight: 700;
-	height: 5vh; /*has predetermoned height before textContent is written into*/
+  color: var(--diceGame-winner-text-color);
+  font-size: 4.5vh;
+  font-weight: 700;
+  height: 5vh; /*has predetermoned height before textContent is written into*/
 }
 #rollBtn {
-	/* width: 160px; */
-	/* height: 50px; */
-	border: 0.3vh solid var(--diceGame-roll-button-color);
-	border-radius: 2vh;
-	background-color: var(--diceGame-roll-button-color);
-	margin-top: 20px;
-	font-size: 4vh;
-	font-weight: 700;
-	padding: 1vh 6vh;
-	color: var(--diceGame-dice-color);
+  border: 0.3vh solid var(--diceGame-roll-button-color);
+  border-radius: 2vh;
+  background-color: var(--diceGame-roll-button-color);
+  margin-top: 20px;
+  font-size: 4vh;
+  font-weight: 700;
+  padding: 1vh 6vh;
+  color: var(--diceGame-dice-color);
 }
 #diceGame h1 {
-	margin-top: 2vh;
-	font-size: 4vh;
-	font-weight: 700;
-	color: var(--diceGame-header-color);
+  margin-top: 2vh;
+  font-size: 4vh;
+  font-weight: 700;
+  color: var(--diceGame-header-color);
 }
 #reset {
-	font-weight: 700;
-	font-size: 2.5vh;
-	text-transform: uppercase;
-	border-bottom: 0.5vh solid transparent;
-	transition: 0.3s;
-	cursor: pointer;
+  font-weight: 700;
+  font-size: 2.5vh;
+  text-transform: uppercase;
+  border-bottom: 0.5vh solid transparent;
+  transition: 0.3s;
+  cursor: pointer;
 }
 #reset:hover {
-	border-color: var(--diceGame-roll-button-color);
+  border-color: var(--diceGame-roll-button-color);
 }
 #scores {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 #scores div {
-	font-size: 2.5vh;
-	text-transform: uppercase;
-	text-wrap: nowrap;
-
-	/* text-wrap:none;
-	align-self:flex-end ; */
-	
+  font-size: 2.5vh;
+  text-transform: uppercase;
+  text-wrap: nowrap;
 }
 #history {
-	color: var(--diceGame-history-text-color);
-	font-size: 5vh;
+  color: var(--diceGame-history-text-color);
+  font-size: 5vh;
 }
 ul {
-	height: 20vh;
+  height: 20vh;
 
-	overflow-y: scroll; /* Enables vertical scrolling only when needed */
-	scrollbar-width: none;
+  overflow-y: scroll;
+  scrollbar-width: none;
 
-	padding-left: 3vh;
+  padding-left: 3vh;
 }
 ul li {
-	padding-bottom: 1vh;
-	padding-right: 1rem;
-	width: 100%;
-	font-size: 2.5vh;
+  padding-bottom: 1vh;
+  padding-right: 1rem;
+  width: 100%;
+  font-size: 2.5vh;
 }
 #player1Score,
 #player2Score {
-	padding-left: 7px;
-	color: var(--diceGame-score-color);
+  padding-left: 7px;
+  color: var(--diceGame-score-color);
 }

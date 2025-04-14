@@ -256,7 +256,7 @@ function algorithm(circles) {
   }
   return point;
 }
-// this function records played rounds
+// this function craetes history records
 function historyRecord(message, winner) {
   let update = document.createElement("li");
   update.textContent = message;
